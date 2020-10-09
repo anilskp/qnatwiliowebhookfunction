@@ -52,7 +52,7 @@ namespace Company.Function
 
         string json = JsonConvert.SerializeObject(dictionary);
         var requestData = new StringContent(json, Encoding.UTF8, "application/json");
-        var url = "https://prod-81.eastus.logic.azure.com:443/workflows/b807d77ea57847669090f30f68d226a2/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=hHbqXcdMS7NToxmUa563AZX1i2jKi9pr4aeBZ0qZJ0I";
+        var url = "https://prod-81.eastus.logic.azure.com:443/workflows/b807d77ea57847669090f30f68d226a2/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=xxxx";
         var qaresponse = await client.PostAsync(String.Format(url), requestData);
         var result = await qaresponse.Content.ReadAsStringAsync();
 
